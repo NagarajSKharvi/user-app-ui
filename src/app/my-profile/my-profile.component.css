@@ -1,0 +1,96 @@
+.profile-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+              0 10px 10px rgba(0, 0, 0, 0.22);
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF4B2B;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 30px;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #FF4B2B;
+  background-color: #FF4B2B;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #e63e20;
+}
+
+.form-group-horizontal {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group-horizontal label {
+  width: 100px; /* Adjust this as needed */
+  font-weight: 600;
+}
+
+.form-group-horizontal input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #007bff;
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+

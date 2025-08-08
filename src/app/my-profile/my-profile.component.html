@@ -1,0 +1,72 @@
+<div class="profile-container">
+  <header class="profile-header">
+    <h2>My Profile</h2>
+  </header>
+
+  
+    <section class="profile-content">
+        <input
+        type="text"
+        placeholder="Last Name"
+        name="userId"
+        required
+        minlength="10"
+        value="{{ userId }}"
+        [disabled]="true"
+        />
+
+        <input
+        class="small-input"
+        type="text"
+        placeholder="User Name"
+        name="username"
+        required
+        minlength="10"
+        value="{{ username }}"
+        [disabled]="!isEditing"
+        />
+
+        <input
+        type="text"
+        placeholder="First Name"
+        name="firstName"
+        required
+        minlength="10"
+        value="{{ firstName }}"
+        [disabled]="!isEditing"
+        />
+
+        <input
+        type="text"
+        placeholder="Last Name"
+        name="lastName"
+        required
+        minlength="10"
+        value="{{ lastName }}"
+        [disabled]="!isEditing"
+        />
+
+        <input
+        type="text"
+        placeholder="Contact"
+        name="contact"
+        required
+        minlength="10"
+        value="{{ contact }}"
+        [disabled]="!isEditing"
+        />
+
+    </section>
+    <div class="button-group">
+        <button class="edit-btn" [hidden]="isEditing" (click)="handleClickEdit()">Edit</button>
+        
+        <button class="edit-btn" [hidden]="!isEditing" (click)="handleClickSave()">Save</button>
+
+        <button class="cancel-btn" (click)="handleClickCancel()">Cancel</button>
+    </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 All rights reserved.<br />Created ❤️ by Nagaraj S Kharvi</p>
+</footer>
+

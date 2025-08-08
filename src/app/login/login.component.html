@@ -1,0 +1,109 @@
+<div class="container" [class.right-panel-active]="isRightPanelActive">
+  <!-- Sign Up Form -->
+  <div class="form-container sign-up-container">
+  <form #signUpForm="ngForm">
+    <h1>Create Account</h1>
+
+    <input
+      type="text"
+      placeholder="First Name"
+      [(ngModel)]="firstName"
+      name="firstName"
+      required
+	  minlength="3"
+      #firstNameRef="ngModel"
+    />
+
+    <input
+      type="text"
+      placeholder="Last Name"
+      [(ngModel)]="lastName"
+      name="lastName"
+      #lastNameRef="ngModel"
+    />
+
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+      name="email"
+      required
+	  minlength="8"
+      #emailRef="ngModel"
+    />
+
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      name="password"
+      required
+	  minlength="8"
+      #passwordRef="ngModel"
+    />
+
+    <!-- Disable Sign Up button unless all fields are valid -->
+    <button
+      type="button"
+      (click)="handleClickSignUp()"
+      [disabled]="!signUpForm.form.valid"
+    >Sign Up
+    </button>
+  </form>
+</div>
+
+  <!-- Sign In Form -->
+  <div class="form-container sign-in-container">
+  <form #signInForm="ngForm">
+    <h1>Sign in</h1>
+
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+      name="email"
+      required
+	  minlength="8"
+    />
+
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      name="password"
+      required
+	  minlength="8"
+    />
+
+    <!-- Disable Sign In button unless all fields are valid -->
+    <button
+      type="button"
+      (click)="handleClickLogin()"
+      [disabled]="!signInForm.form.valid"
+    >
+      Sign In
+    </button>
+  </form>
+</div>
+
+
+  <!-- Overlay -->
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" type="button" (click)="showSignIn()">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start your journey with us</p>
+        <button class="ghost" type="button" (click)="showSignUp()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 All rights reserved.<br />Created ❤️ by Nagaraj S Kharvi</p>
+</footer>
