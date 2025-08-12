@@ -12,6 +12,7 @@
         required
         minlength="10"
         value="{{ userId }}"
+        [(ngModel)]="userId"
         [disabled]="true"
         />
 
@@ -23,6 +24,7 @@
         required
         minlength="10"
         value="{{ username }}"
+        [(ngModel)]="username"
         [disabled]="!isEditing"
         />
 
@@ -33,6 +35,7 @@
         required
         minlength="10"
         value="{{ firstName }}"
+        [(ngModel)]="firstName"
         [disabled]="!isEditing"
         />
 
@@ -43,6 +46,7 @@
         required
         minlength="10"
         value="{{ lastName }}"
+        [(ngModel)]="lastName"
         [disabled]="!isEditing"
         />
 
@@ -53,6 +57,7 @@
         required
         minlength="10"
         value="{{ contact }}"
+        [(ngModel)]="contact"
         [disabled]="!isEditing"
         />
 
